@@ -265,7 +265,7 @@ Camera Based 3D Object Tracking implemented using C++ as part of project submiss
  - ####  FP.5 Performance Evaluation 1	
  	- Task : Find examples where the TTC estimate of the Lidar sensor does not seem plausible. Describe your observations and provide a sound argumentation why you think this happened.
   	- Evaluation :
-  	- | Frame     | TTC Lidar (s) |
+		| Frame     | TTC Lidar (s) |
 		| --------- | -----:|
           |1| 12.289|
          | 2 | 13.354|
