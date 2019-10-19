@@ -5,7 +5,7 @@ Camera Based 3D Object Tracking implemented using C++ as part of project submiss
 ### Solution Report : 
 
 <p align="center">
-<img src="https://github.com/hegde056/SFND_3D_Object_Tracking/blob/master/media/Result_sample.PNG" width="500" height="300" /></p> 
+<img src="https://github.com/hegde056/SFND_3D_Object_Tracking/blob/master/media/Result_sample.PNG" width="600" height="300" /></p> 
 
 
 - ####  FP.1 Match 3D Objects
@@ -84,7 +84,7 @@ Camera Based 3D Object Tracking implemented using C++ as part of project submiss
  	- Task:  Compute the time-to-collision in second for all matched 3D objects using only Lidar measurements from the matched bounding boxes between current and previous frame.
 	- Implementation :
 	  	<p align="center">
-    <img src="https://github.com/hegde056/SFND_3D_Object_Tracking/blob/master/media/TTC_Lidar_draw.png" width="500" height="300" />  </p> 
+    <img src="https://github.com/hegde056/SFND_3D_Object_Tracking/blob/master/media/TTC_Lidar_draw.png" width="500" height="300" />  	</p> 
     <p align="center">
     <img src="https://github.com/hegde056/SFND_3D_Object_Tracking/blob/master/media/TTC_Lidar_formula.png" width="500" height="300" />  </p> 
     Only those lidar points within the ego lane are considered for TTC calculation. Additionally to get a fairly accurate value, the average distances are considered for previous and current lidar points and used in the TTC calculation formula. 
@@ -264,48 +264,47 @@ Camera Based 3D Object Tracking implemented using C++ as part of project submiss
   
  - ####  FP.5 Performance Evaluation 1	
  	- Task : Find examples where the TTC estimate of the Lidar sensor does not seem plausible. Describe your observations and provide a sound argumentation why you think this happened.
-  	- Evaluation : 
-  	
-    	*Frame* | *TTC Lidar (s)*
-          ----|-----
-          1	| 12.289
-          2 | 13.354
-          3 | 16.384
-          4 | 14.076
-          5 | 12.729
-          6 | 13.751
-          7 | 13.731
-          8 | 13.790
-          9 | 12.058
-          10 | 11.864
-          11 | 11.968
-          12  | 9.887
-          13 | 9.425
-          14 | 9.302
-          15 | 8.32
-          16 | 8.89
-          17 | 11.03
-          18 | 8.535
+  	- Evaluation :
+  	- | Frame     | TTC Lidar (s) |
+		| --------- | -----:|
+          |1| 12.289|
+         | 2 | 13.354|
+         | 3 | 16.384|
+          |4 | 14.076|
+         | 5 | 12.729|
+          |6 | 13.751|
+         | 7 | 13.731|
+         | 8 | 13.790|
+          |9 | 12.058|
+         | 10 | 11.864|
+         | 11 | 11.968|
+         | 12  | 9.887|
+        |  13 | 9.425|
+         | 14 | 9.302|
+        |  15 | 8.32|
+         | 16 | 8.89|
+         | 17 | 11.03|
+         | 18 | 8.535|
 
    Some examples of implausable estimates :    
    Example 1  : 
   	<p align="center">
-    <img src="https://github.com/hegde056/SFND_3D_Object_Tracking/blob/master/media/F1.PNG" width="300" height="200" />  </p> 
+    <img src="https://github.com/hegde056/SFND_3D_Object_Tracking/blob/master/media/F1.PNG" width="500" height="300" />  </p> 
     <p align="center">
-    <img src="https://github.com/hegde056/SFND_3D_Object_Tracking/blob/master/media/F2.PNG" width="300" height="200" />  </p>
+    <img src="https://github.com/hegde056/SFND_3D_Object_Tracking/blob/master/media/F2.PNG" width="500" height="300" />  </p>
     <p align="center">
-    <img src="https://github.com/hegde056/SFND_3D_Object_Tracking/blob/master/media/F3.PNG" width="300" height="200" />  </p>
+    <img src="https://github.com/hegde056/SFND_3D_Object_Tracking/blob/master/media/F3.PNG" width="500" height="300" />  </p>
     <p align="center">
-    <img src="https://github.com/hegde056/SFND_3D_Object_Tracking/blob/master/media/F4.PNG" width="300" height="200" /> 
+    <img src="https://github.com/hegde056/SFND_3D_Object_Tracking/blob/master/media/F4.PNG" width="500" height="300" /> 
     </p>
     
    Example 2  : 
   	<p align="center">
-    <img src="https://github.com/hegde056/SFND_3D_Object_Tracking/blob/master/media/F16.PNG" width="300" height="200" />  </p>
+    <img src="https://github.com/hegde056/SFND_3D_Object_Tracking/blob/master/media/F16.PNG" width="500" height="300" />  </p>
     <p align="center">
-    <img src="https://github.com/hegde056/SFND_3D_Object_Tracking/blob/master/media/F17.PNG" width="300" height="200" /> </p>
+    <img src="https://github.com/hegde056/SFND_3D_Object_Tracking/blob/master/media/F17.PNG" width="500" height="300" /> </p>
     <p align="center">
-    <img src="https://github.com/hegde056/SFND_3D_Object_Tracking/blob/master/media/F18.PNG" width="300" height="200" /> 
+    <img src="https://github.com/hegde056/SFND_3D_Object_Tracking/blob/master/media/F18.PNG" width="500" height="300" /> 
     </p>
    
 * Although in the FP.2 task the effect of outliers on TTC is minimized, it could not be completely removed. There still are outliers as can be seen above (eg. edges like mirrors of preceding vehicle) which accumulate to  inaccurate TTC measurement
@@ -317,19 +316,19 @@ Camera Based 3D Object Tracking implemented using C++ as part of project submiss
  	- Task : Run several detector / descriptor combinations and look at the differences in TTC estimation. Find out which methods perform best and also include several examples where camera-based TTC estimation is way off. As with Lidar, describe your observations again and also look into potential reasons.
   	- Evaluation :The detailed evaluation is documented in the spreadsheet : [FP_6_Evaluation.xlsx](https://github.com/SFND_3D_Object_Tracking/blob/master/FP_6_Evaluation.xlsx) . 
     <p align="center">
-    <img src="https://github.com/hegde056/SFND_3D_Object_Tracking/blob/master/media/FP_6_BRISK_det_combinations.png" width="500" height="300" /> 
+    <img src="https://github.com/hegde056/SFND_3D_Object_Tracking/blob/master/media/FP_6_BRISK_det_combinations.png" width="600" height="300" /> 
     </p> 
         <p align="center">
-    <img src="https://github.com/hegde056/SFND_3D_Object_Tracking/blob/master/media/FP_6_FAST_det_combinations.png" width="500" height="300" /> 
+    <img src="https://github.com/hegde056/SFND_3D_Object_Tracking/blob/master/media/FP_6_FAST_det_combinations.png" width="600" height="300" /> 
     </p> 
         <p align="center">
-    <img src="https://github.com/hegde056/SFND_3D_Object_Tracking/blob/master/media/FP_6_AKAZE_det_combinations.png" width="500" height="300" /> 
+    <img src="https://github.com/hegde056/SFND_3D_Object_Tracking/blob/master/media/FP_6_AKAZE_det_combinations.png" width="600" height="300" /> 
     </p> 
         <p align="center">
-    <img src="https://github.com/hegde056/SFND_3D_Object_Tracking/blob/master/media/FP_6_SIFT_det_combinations.png" width="500" height="300" /> 
+    <img src="https://github.com/hegde056/SFND_3D_Object_Tracking/blob/master/media/FP_6_SIFT_det_combinations.png" width="600" height="300" /> 
     </p> 
         <p align="center">
-    <img src="https://github.com/hegde056/SFND_3D_Object_Tracking/blob/master/media/FP_6_SHITOMASI_det_combinations.png" width="500" height="300" /> 
+    <img src="https://github.com/hegde056/SFND_3D_Object_Tracking/blob/master/media/FP_6_SHITOMASI_det_combinations.png" width="600" height="300" /> 
     </p> 
 
  * The AKAZE and SIFT detectors were more stable and accurate compared to other combinations. 
